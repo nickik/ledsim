@@ -1,17 +1,27 @@
-# Conway's Game of Life
+# ledsim
 
-![Conway's Game of Life](../../img/conway.png)
+
+Simulator for:
+
+https://github.com/n0ctu/LEDs-get-crazy-payloads
 
 ## Running
 
+Pass with Port, Height and Width
+
 ```bash
-cargo run --release --package conway
+cargo run --release --package ledsim -- 54321 24 48
 ```
 
-## Controls
+## Use
 
-- Mouse: Left click toggles cells, dragging draws lines.
-- <kbd>P</kbd>: Toggle pause.
-- <kbd>space</kbd>: Frame step (enables pause if not already paused)
-- <kbd>R</kbd>: Randomize
-- <kbd>escape</kbd>: Quit
+```bash
+cat /dev/urandom | nc -u 127.0.0.1 54321
+```
+
+## Release Build
+
+```bash
+./target/release/ledsim
+```
+
