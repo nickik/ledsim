@@ -1,0 +1,22 @@
+[package]
+name = "ledsim"
+version = "0.1.0"
+authors = ["Niklaus Zbinden <niklauszbinden@gmail.com>"]
+edition = "2021"
+publish = false
+
+[features]
+optimize = ["log/release_max_level_warn"]
+default = ["optimize"]
+
+[dependencies]
+byteorder = "1"
+env_logger = "0.10"
+error-iter = "0.4"
+getrandom = "0.2"
+clipline = "0.1.1"
+log = "0.4"
+pixels = { path = "../pixels" }
+randomize = "3"
+winit = "0.29"
+winit_input_helper = "0.15"
