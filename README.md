@@ -10,7 +10,7 @@ https://github.com/n0ctu/LEDs-get-crazy-payloads
 Pass with Port, Height and Width
 
 ```bash
-cargo run --release --package ledsim -- 54321 24 48
+cargo run --release --package ledsim -- 54321 24 48 20
 ```
 
 ## Use

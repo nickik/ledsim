@@ -51,7 +51,6 @@ fn main() -> Result<(), Error> {
 
     println!("UDP server listening on {}", address);
 
-
     let window = {
         let size = LogicalSize::new(width as f64, height as f64);
         let scaled_size = LogicalSize::new(width as f64 * scale as f64, height as f64 * scale as f64);
@@ -93,7 +92,7 @@ fn main() -> Result<(), Error> {
 
         if input.update(&event) {
             // Close events
-            if input.key_pressed(VirtualKeyCode::Escape) || input.close_requested() {
+            if input.key_pressed(VirtualKeyCode::Escape) || input.close_requested()  || input.key_pressed(VirtualKeyCode::Q)  {
                 *control_flow = ControlFlow::Exit;
                 return;
             }
